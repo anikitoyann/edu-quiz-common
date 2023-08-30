@@ -1,2 +1,19 @@
-package com.example.eduquizcommon.entity;public class Question {
+package com.example.eduquizcommon.entity;
+
+import jakarta.persistence.*;
+import lombok.Data;
+
+@Data
+@Entity
+@Table
+public class Question {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    @Enumerated(value = EnumType.STRING)
+private Type type;
+    private String title;
+    private Double score;
+    @ManyToOne
+    private Quiz quiz;
 }
