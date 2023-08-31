@@ -11,9 +11,9 @@ public class Question {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @Enumerated(value = EnumType.STRING)
-private Type type;
+    private Type type;
     private String title;
-    private Double score;
+    private int score;
     @ManyToOne
     private Quiz quiz;
 }
