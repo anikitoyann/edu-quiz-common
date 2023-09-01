@@ -12,4 +12,12 @@ public interface QuizService {
     List<Quiz> findAll();
 
     Optional<Quiz> findById(int id);
+
+    Quiz save(Quiz quiz);
+
+    void deleteById(int id);
+
+    Quiz updateQuiz(Quiz quiz, Optional<Quiz> byId);
+
+    boolean existsById(int id);
 }

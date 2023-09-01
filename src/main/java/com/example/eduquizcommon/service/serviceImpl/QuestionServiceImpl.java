@@ -28,4 +28,14 @@ public class QuestionServiceImpl implements QuestionService {
     public List<Question> findAll() {
         return questionRepository.findAll();
     }
+
+    @Override
+    public void deleteById(int id) {
+        questionRepository.deleteById(id);
+    }
+
+    @Override
+    public boolean existsById(int id) {
+        return questionRepository.existsById(id);
+    }
 }

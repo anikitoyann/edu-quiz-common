@@ -13,6 +13,6 @@ public class QuestionOption {
     @ManyToOne
     private Question question;
     private String title;
-    private int isCorrect;
+    private boolean isCorrect;
 
 }

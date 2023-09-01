@@ -11,4 +11,8 @@ public interface QuestionService {
     void save(Question question);
 
     List<Question> findAll();
+
+    void deleteById(int id);
+
+    boolean existsById(int id);
 }

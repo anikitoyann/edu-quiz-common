@@ -31,4 +31,35 @@ public class QuizServiceImpl implements QuizService {
     public Optional<Quiz> findById(int id) {
         return quizRepository.findById(id);
     }
+
+    @Override
+    public Quiz save(Quiz quiz) {
+         quizRepository.save(quiz);
+        return quiz;
+    }
+
+    @Override
+    public void deleteById(int id) {
+        quizRepository.deleteById(id);
+    }
+
+    @Override
+    public Quiz updateQuiz(Quiz quiz, Optional<Quiz> byId) {
+        Quiz quizDb = byId.get();
+        if (quiz.getTitle() != null && !quiz.getTitle().isEmpty()) {
+            quizDb.setTitle(quiz.getTitle());
+
+        }
+        if (quiz.getCreatedDateTime() != null ) {
+            quizDb.setCreatedDateTime(quiz.getCreatedDateTime());
+
+        }
+
+        return quizDb;
+    }
+
+    @Override
+    public boolean existsById(int id) {
+        return quizRepository.existsById(id);
+    }
 }
