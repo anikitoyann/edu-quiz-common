@@ -34,4 +34,9 @@ public class AnswerServiceimpl implements AnswerService {
     public boolean existsById(int id) {
         return answerRepository.existsById(id);
     }
+
+    @Override
+    public Integer getTotalScore() {
+        return answerRepository.getTotalScore();
+    }
 }

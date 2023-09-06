@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface QuestionService {
-    Optional<Question> findAllByQuiz_id(int quiz_id);
+    List<Question> findAllQuestionByQuiz_id(int quiz_id);
 
     void save(Question question);
 
@@ -15,4 +15,6 @@ public interface QuestionService {
     void deleteById(int id);
 
     boolean existsById(int id);
+
+    Optional<Question> findById(Integer questionId);
 }

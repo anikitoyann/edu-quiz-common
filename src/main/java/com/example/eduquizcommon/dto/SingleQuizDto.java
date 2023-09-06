@@ -1,7 +1,6 @@
 package com.example.eduquizcommon.dto;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+
+import com.example.eduquizcommon.entity.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,7 +10,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class QuestionOptionDto {
-    private  String title;
-  private boolean isCorrect;
+public class SingleQuizDto {
+    private Answer answer;
+    private Quiz quiz;
+    private Question question;
+    private QuestionOption questionOption;
 }

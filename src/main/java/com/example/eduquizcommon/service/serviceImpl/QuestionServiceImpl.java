@@ -15,10 +15,9 @@ public class QuestionServiceImpl implements QuestionService {
     private final QuestionRepository questionRepository;
 
     @Override
-    public Optional<Question> findAllByQuiz_id(int quiz_id) {
-        return questionRepository.findAllByQuiz_id(quiz_id);
+    public List<Question> findAllQuestionByQuiz_id(int quiz_id) {
+        return questionRepository.findAllQuestionByQuiz_id(quiz_id);
     }
-
     @Override
     public void save(Question question) {
         questionRepository.save(question);
@@ -38,4 +37,11 @@ public class QuestionServiceImpl implements QuestionService {
     public boolean existsById(int id) {
         return questionRepository.existsById(id);
     }
+
+    @Override
+    public Optional<Question> findById(Integer questionId) {
+        return questionRepository.findById(questionId);
+    }
+
+
 }

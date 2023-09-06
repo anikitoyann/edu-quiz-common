@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -21,13 +22,18 @@ public class QuestionOptionServiceImpl implements QuestionOptionService {
     }
 
     @Override
-    public List<QuestionOption> getQuestionOptionByQuestionId(int questionId) {
-        return questionOptionRepository.getQuestionOptionByQuestionId(questionId);
+    public List<QuestionOption> getAllQuestionOptionByQuestionId(int questionId) {
+        return questionOptionRepository.getAllQuestionOptionByQuestionId(questionId);
     }
 
     @Override
     public List<QuestionOption> findAll() {
         return questionOptionRepository.findAll();
+    }
+
+    @Override
+    public Optional<QuestionOption> findById(Integer questionOptionId) {
+        return questionOptionRepository.findById(questionOptionId);
     }
 
 

@@ -1,5 +1,4 @@
 package com.example.eduquizcommon.mapper.mapper;
-
 import com.example.eduquizcommon.dto.AnswerDto;
 import com.example.eduquizcommon.dto.CreateAnswerRequestDto;
 import com.example.eduquizcommon.entity.Answer;

@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface QuestionOptionRepository extends JpaRepository<QuestionOption,Integer> {
 
-    List<QuestionOption> getQuestionOptionByQuestionId(int questionId);
+    List<QuestionOption> getAllQuestionOptionByQuestionId(int questionId);
 }

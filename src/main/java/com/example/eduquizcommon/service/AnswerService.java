@@ -1,7 +1,5 @@
 package com.example.eduquizcommon.service;
-
 import com.example.eduquizcommon.entity.Answer;
-
 import java.util.List;
 
 public interface AnswerService {
@@ -13,4 +11,6 @@ public interface AnswerService {
     Answer save(Answer answer);
 
     boolean existsById(int id);
+
+    Integer getTotalScore();
 }
