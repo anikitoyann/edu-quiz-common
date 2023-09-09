@@ -1,5 +1,4 @@
 package com.example.eduquizcommon.service.serviceImpl;
-
 import com.example.eduquizcommon.entity.Quiz;
 import com.example.eduquizcommon.repository.QuizRepository;
 import com.example.eduquizcommon.service.QuizService;
@@ -7,7 +6,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 

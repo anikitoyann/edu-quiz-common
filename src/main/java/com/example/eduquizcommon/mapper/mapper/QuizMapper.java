@@ -3,7 +3,6 @@ import com.example.eduquizcommon.dto.CreateQuizRequestDto;
 import com.example.eduquizcommon.dto.QuizDto;
 import com.example.eduquizcommon.entity.Quiz;
 import org.mapstruct.Mapper;
-
 import java.util.List;
 
 @Mapper(componentModel = "spring")

@@ -1,9 +1,6 @@
 package com.example.eduquizcommon.entity;
-
 import jakarta.persistence.*;
-import jdk.jfr.BooleanFlag;
 import lombok.Data;
-
 @Data
 @Entity
 @Table
